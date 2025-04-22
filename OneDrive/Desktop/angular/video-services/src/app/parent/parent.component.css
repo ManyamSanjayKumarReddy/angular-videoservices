@@ -1,0 +1,26 @@
+@import '../../assets/external-styles.css';
+
+/* h2 {
+    font-size: 100px;
+} */
+
+:host{
+    display: block;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+:host(.active){
+    background-color: #e0ffe0;
+    border: 2px solid #4caf50;
+    height: 500px;
+    width: 500px;
+}
+
+:host-context {
+    border: 2px solid red;
+    height: 500px;
+    width: 500px;
+  }

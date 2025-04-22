@@ -1,0 +1,23 @@
+{{ childMessage}}
+
+<button (click)="sendMessage()">Send Message</button>
+
+<ng-content [question]></ng-content>
+<ng-content [answer]></ng-content>
+
+<button (click)="toggleText($event)">Toggle</button>
+{{ showText}}
+
+<hr> <br>
+
+
+{{ todaysDate | date:'EEEE MMMM y '}}
+
+{{ "Sanjay" |  greetingsPipe | uppercase}}
+
+{{ 500 | currency:'USD':'symbol' }}
+
+<button [disabled]="isDisabled">Disabled</button>
+
+<button (click)="onSave()">save</button>
+

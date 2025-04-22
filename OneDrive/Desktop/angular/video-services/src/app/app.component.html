@@ -1,0 +1,29 @@
+<!-- <button (click)="toggleComponent()">
+  {{ showHelloComponent ? 'Hide' : 'Show' }} HelloWorld Component
+</button>
+
+<hr> -->
+
+<!-- <app-hello-world *ngIf="showHelloComponent"></app-hello-world> -->
+<!-- <app-parent> -->
+
+<app-child>
+  <p>This is from Root</p>
+  <h1 question>Is this from app component</h1>
+  <h3 answer>yes</h3>
+</app-child>
+
+<app-delete-items (deleteRequest)= "deleteItem($event)" ></app-delete-items>
+
+
+<app-app-sizer [(size)]="fontSizePx"></app-app-sizer>
+<div [style.font-size.px] = "fontSizePx">
+Resizable text
+</div>
+
+<app-tempvar></app-tempvar>
+
+<app-directives></app-directives>
+
+<p [appHighlight]="'orange'">Test of Directives</p>
+
