@@ -1,3 +1,13 @@
+<h1>Angular Router App</h1>
+
+<nav>
+  <ul>
+    <li><a routerLink="/first-component/1">First Component</a></li>
+    <li><a routerLink="/second-component">Second Component</a></li>
+  </ul>
+</nav>
+<router-outlet></router-outlet>
+
 <!-- <button (click)="toggleComponent()">
   {{ showHelloComponent ? 'Hide' : 'Show' }} HelloWorld Component
 </button>
@@ -13,12 +23,12 @@
   <h3 answer>yes</h3>
 </app-child>
 
-<app-delete-items (deleteRequest)= "deleteItem($event)" ></app-delete-items>
+<app-delete-items (deleteRequest)="deleteItem($event)"></app-delete-items>
 
 
 <app-app-sizer [(size)]="fontSizePx"></app-app-sizer>
-<div [style.font-size.px] = "fontSizePx">
-Resizable text
+<div [style.font-size.px]="fontSizePx">
+  Resizable text
 </div>
 
 <app-tempvar></app-tempvar>
@@ -26,4 +36,3 @@ Resizable text
 <app-directives></app-directives>
 
 <p [appHighlight]="'orange'">Test of Directives</p>
-

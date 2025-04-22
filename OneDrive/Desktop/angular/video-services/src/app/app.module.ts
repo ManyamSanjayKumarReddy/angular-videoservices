@@ -13,6 +13,11 @@ import { TempvarComponent } from './tempvar/tempvar.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { FormsModule } from '@angular/forms';
 import { HighlightDirective } from './highlight.directive';
+import { FirstComponent } from './first/first.component';
+import { SecondComponent } from './second/second.component';
+import { NotfoundComponent } from './notfound/notfound.component';
+import { ChildAComponent } from './child-a/child-a.component';
+import { ChildBComponent } from './child-b/child-b.component';
 
 @NgModule({
   declarations: [
@@ -26,12 +31,18 @@ import { HighlightDirective } from './highlight.directive';
     TempvarComponent,
     DirectivesComponent,
     HighlightDirective,
+    FirstComponent,
+    SecondComponent,
+    NotfoundComponent,
+    ChildAComponent,
+    ChildBComponent,
     
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
