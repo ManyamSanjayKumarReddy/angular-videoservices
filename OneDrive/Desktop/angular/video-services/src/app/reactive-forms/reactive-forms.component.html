@@ -1,0 +1,40 @@
+<!-- <label for="name">
+    Name
+</label>
+
+<input type="text" id="name" [formControl]="name">
+<p>Value: {{name.value}}</p>
+
+<div>
+    <button (click)="updateName()">Update</button>
+</div> -->
+
+<form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+    <label for="first-name">First Name</label>
+    <input type="text" id="first-name" formControlName="firstName">
+
+    <div *ngIf="firstName?.invalid && (firstName?.dirty || firstName?.touched)">
+        <div *ngIf="firstName?.errors?.['required']">
+            This is Required
+        </div> 
+        <div *ngIf="firstName?.errors?.['minlength']">
+            Min Length is 4
+        </div> 
+
+    </div>
+    <label for="last-name">Last Name</label>
+    <input type="text" id="last-name" formControlName="lastName" >
+    <div *ngIf="lastName?.invalid && (lastName?.dirty || lastName?.touched)">
+        <div *ngIf="lastName?.errors?.['required']">
+            This is Required
+        </div> 
+        <div *ngIf="lastName?.errors?.['minlength']">
+            Min Length is 4
+        </div> 
+
+    </div>
+    <button [disabled]="!profileForm.valid" type="submit">Submit</button>
+</form>
+
+<hr>
+<br>

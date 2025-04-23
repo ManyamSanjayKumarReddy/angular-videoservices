@@ -11,13 +11,17 @@ import { DeleteItemsComponent } from './delete-items/delete-items.component';
 import { AppSizerComponent } from './app-sizer/app-sizer.component';
 import { TempvarComponent } from './tempvar/tempvar.component';
 import { DirectivesComponent } from './directives/directives.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HighlightDirective } from './highlight.directive';
 import { FirstComponent } from './first/first.component';
 import { SecondComponent } from './second/second.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { ChildAComponent } from './child-a/child-a.component';
 import { ChildBComponent } from './child-b/child-b.component';
+import { FormsDemoComponent } from './forms-demo/forms-demo.component';
+import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.component';
+import { HttpclientComponent } from './httpclient/httpclient.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -36,13 +40,18 @@ import { ChildBComponent } from './child-b/child-b.component';
     NotfoundComponent,
     ChildAComponent,
     ChildBComponent,
+    FormsDemoComponent,
+    ReactiveFormsComponent,
+    HttpclientComponent,
     
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

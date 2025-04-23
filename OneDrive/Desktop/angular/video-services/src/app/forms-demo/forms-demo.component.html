@@ -1,0 +1,36 @@
+<div [hidden]="submitted">
+    <!-- <p>{{ model | json }}</p> -->
+    <form #petForm="ngForm" (ngSubmit)="onSubmit()">
+        <div>
+            <label for="name">Name</label>
+            <input type="text" id="name" required [(ngModel)]="model.name" name="name" minlength="4" #name="ngModel">
+        </div>
+        <div *ngIf="name.invalid && (name.dirty || name.touched)">
+            <div *ngIf="name.errors?.['required']">
+                Name is required
+            </div>
+            <div *ngIf="name.errors?.['minlength']">
+                Name must be at least 4 characters long
+
+            </div>
+
+        </div>
+
+        <div>
+            <label for="specie">Specie</label>
+            <select id="specie" required [(ngModel)]="model.specie" name="specie">
+                <option *ngFor="let specie of species" [value]="specie">{{specie}}</option>
+
+            </select>
+        </div>
+        <button [disabled]="!petForm.form.valid" type="submit">Submit</button>
+    </form>
+
+</div>
+
+<div [hidden]="!submitted">
+    <h2>You Submitted</h2>
+    <p>Name: {{ model.name}}</p>
+    <p>Specie: {{ model.specie}}</p>
+    <button (click)="submitted = false">Edit</button>
+</div>
